@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   getEntries.getEntries()
   .then(function(entries){
     entries.reverse()
-    res.render('displayProject', {entries, 'name': "Harrison", 'projectName': "Footprints"})
+    res.render('displayProject', {entries, 'name': "Harrison", })
     console.log(entries);
   })
   .catch(function(err){
@@ -20,9 +20,15 @@ router.get('/:projectId', function(req, res) {
     //getUser projects
     console.log("project id = ", req.params.projectId);
     getEntries.getEntriesByProjectId(req.params.projectId)
-      .then(function(result) {
-        console.log("result", result);
+      .then(function(entries) {
+        console.log("result", entries);
+        res.render('displayProject', {entries, 'name': 'Harrison',
+        'projectName': entries[0].projectTitle, 'user_id': entries[0].user_id, 'project_id': entries[0].project_id})
       })
+})
+
+router.get('/:projectId/new', function(req, res) {
+  res.render('newEntry')
 })
 
 router.post('/', function(req, res, next) {
