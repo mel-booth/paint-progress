@@ -1,12 +1,26 @@
+<div class="container">
+  <div class="twelve columns">
+    <header id="float">
+      <div class="row" >
+        <div class="twelve columns">
+          <h1>PAINT PROGRESS</h1>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
 <form action="/login" method="post">
-  <div class="container">
-    <h3>Username:</h3>
+  <div class="container" id="loginForm">
+    <h5>Username:</h5>
     <input placeholder="username" type="text" name="user"/><br>
-    <h3>Password:</h3>
+    <h5>Password:</h5>
     <input placeholder="password" type="password" name="password"/>
     {{#if message}}
       <h1>{{message}}</h1>
     {{/if}}
   </div>
-<input type="submit" value="Login"/>
+<div class="container submit">
+  <input type="submit" value="Login" id="loginButton"/>
+</div>
 </form>
