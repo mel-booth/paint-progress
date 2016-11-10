@@ -1,9 +1,36 @@
-<h1>Hello</h1>
+<div class="container">
+  <div class="twelve columns">
+    <header id="float">
+      <div class="row">
+        <div class="four columns">
+          <h2>name  projectName</h2>
+        </div>
+        <div class="four columns">
+          <h1>PAINT PROGRESS</h1>
+        </div>
+        <div class="four columns">
+          <form action="/entries" method="get">
+            <input type="submit" value="Go Back"/>
+          </form>
+        </div>
+        </div>
+    </header>
+  </div>
+</div>
+<br></br>
+<br></br>
 <form action="/entries" method="post">
   <div class="container">
-    <input placeholder="Summary of changes" type="text" name="entryTitle"/><br>
-    <input placeholder="Date dd/mm/yy" type="text" name="date"/><br>
-    <input placeholder="Image URL" type="text" name="image"/><br>
+    <h3>Title:</h3><input placeholder="Summary of changes" type="text" name="entryTitle"/><br>
+    <h3>Date:</h3>
+    <input placeholder="dd" class="date" type="text" name="dateDay"/>/
+    <input placeholder="mm" class="date" type="text" name="dateMonth"/>/
+    <input placeholder="yy" class="date" type="text" name="dateYear"/>
+
+    <br>
+    <h3>Image Link:</h3>
+    <input placeholder="Image URL" type="text" name="image"/>
+    <br>
   </div>
 <input type="submit" value="Create Entry"/>
 </form>
