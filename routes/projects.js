@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:userId', function(req, res) {
   //console.log(req.params.userId);
-  users.getProjectsByUserId(req.params.userId)
+  users.getProjectsByUserId(Number(req.params.userId))
     .then(function(projects) {
       console.log(projects);
       res.render('projects', {projects, 'name': projects[0].userName, 'userId': req.params.userId})
