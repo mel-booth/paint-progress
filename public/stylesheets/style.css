@@ -6,3 +6,25 @@ body {
 a {
   color: #00B7FF;
 }
+
+#grad {
+  background: #C0C0C0; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #C0C0C0, #FFFFFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #C0C0C0, #FFFFFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #C0C0C0, #FFFFFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #C0C0C0, #FFFFFF); /* Standard syntax */
+  background-attachment: fixed;
+}
+
+#opac {
+  background: rgba(255,255,255,0.2);
+  z-index: 9;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+}
