@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   getEntries.getEntries()
   .then(function(entries){
     entries.reverse()
-    res.render('displayProject', {entries})
+    res.render('displayProject', {entries, 'name': "Harrison", 'projectName': "Footprints"})
     console.log(entries);
   })
   .catch(function(err){
