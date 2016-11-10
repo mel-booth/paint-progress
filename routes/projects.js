@@ -12,7 +12,7 @@ router.get('/:userId', function(req, res) {
   users.getProjectsByUserId(req.params.userId)
     .then(function(projects) {
       console.log(projects);
-      res.render('projects', {projects, 'name': projects[0].userName, 'id': req.params.userId})
+      res.render('projects', {projects, 'name': projects[0].userName, 'userId': req.params.userId})
     })
 })
 

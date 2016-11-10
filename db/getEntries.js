@@ -4,7 +4,8 @@ var knex = Knex(knexConfig)
 
 module.exports = {
   getEntries,
-  setEntry
+  setEntry,
+  getEntriesByProjectId
 }
 
 function getEntries() {
@@ -15,4 +16,8 @@ function setEntry(obj) {
   var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
   return knex('entries').insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image})
 
+}
+
+function getEntriesByProjectId(id) {
+  return knex('entries').join('projects', 'projectId', id)
 }
