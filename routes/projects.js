@@ -16,4 +16,6 @@ router.get('/:userId', function(req, res) {
     })
 })
 
+//router.get('/:userId')
+
 module.exports = router;
