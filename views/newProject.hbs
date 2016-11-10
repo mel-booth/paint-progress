@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="twelve columns">
+    <header id="float">
+      <div class="row">
+        <div class="four columns">
+          <h1>{{username}}</h1>
+        </div>
+        <div class="four columns">
+          <h1>PAINT PROGRESS</h1>
+        </div>
+        <div class="four columns" id="headerButton">
+          <form action="/entries" method="get">
+            <input type="submit" value="Go Back"/>
+          </form>
+        </div>
+        </div>
+    </header>
+  </div>
+</div>
+<br></br>
+<br></br>
+<form action="/projects/{{userId}}" method="post">
+  <div class="container" id= "newEntryCont">
+    <h3 class="entryh3">Project Title:</h3>
+    <input placeholder="title" type="text" name="projectTitle"/><br>
+    <h3 class="entryh3">Date Started:</h3>
+
+    <input placeholder="dd" class="date" type="text" name="dateDay"/>
+    <input placeholder="mm" class="date" type="text" name="dateMonth"/>
+    <input placeholder="yy" class="date" type="text" name="dateYear"/>
+
+  </div>
+<div class="container" id="submit">
+  <div class="row">
+    <div class="twelve columns" >
+      <input type="submit" value="Create Project" id="submitButton"/>
+      </div>
+  </div>
+</div>
+</form>

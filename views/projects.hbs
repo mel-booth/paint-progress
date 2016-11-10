@@ -9,7 +9,7 @@
           <a class="header" href="/login">PAINT PROGRESS</ha>
         </div>
         <div class="four columns">
-          <form action="/projects/{{id}}/new" method="get">
+          <form action="/projects/{{userId}}/new" method="get">
             <input type="submit" value="New Project"/>
           </form>
         </div>
@@ -21,7 +21,7 @@
 <div class="container" id="projBody">
   <div class="twelve columns">
     {{#each projects}}
-    <a href="/projects/{{id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>
+    <a href="/projects/{{this.user_id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>
 
     {{/each}}
   </div>

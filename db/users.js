@@ -5,7 +5,8 @@ var knex = Knex(knexConfig)
 module.exports = {
   getUser,
   getUserByUsername,
-  getProjectsByUserId
+  getProjectsByUserId,
+  newProject
 }
 
 function getUser(obj) {
@@ -17,5 +18,11 @@ function getUserByUsername(username) {
 }
 
 function getProjectsByUserId(id) {
-  return knex('projects').join('users', 'user_id', id)
+  return knex('users').join('projects', 'projects.user_id', id)
+}
+
+function newProject(obj, userId) {
+  var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
+
+  return knex('projects').insert({'projectTitle': obj.projectTitle, 'dateCreated': dateString, 'user_id': userId})
 }
