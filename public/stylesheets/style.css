@@ -36,3 +36,24 @@ img {
   border-right: solid 50px white;
   box-shadow: 10px -10px 60px grey;
 }
+.entryh3 {
+  margin-top: 2.5%;
+}
+
+#newEntryCont {
+  margin-top: 2%;
+  background-color: white;
+  border: solid 20px white;
+  border-left: solid 50px white;
+  border-right: solid 50px white;
+  box-shadow: 10px -10px 60px grey;
+  padding-bottom: 2%;
+}
+
+#submitButton {
+  margin-top: 5%;
+}
+
+.date {
+  margin-right: 1%;
+}
