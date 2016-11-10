@@ -10,15 +10,19 @@ router.get('/', function(req, res, next) {
     res.render('displayProject', {entries})
     console.log(entries);
   })
+  .catch(function(err){
+    console.log(err);
+  })
   // console.log(getEntries.getEntries());
 });
 
 router.post('/', function(req, res, next) {
-  console.log(typeof req.body)
   getEntries.setEntry(req.body)
   .then(function(done){
-    console.log(done)
     res.redirect('/entries')
+  })
+  .catch(function(err){
+    console.log(err);
   })
 })
 module.exports = router;
