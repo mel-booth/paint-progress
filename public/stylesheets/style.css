@@ -1,12 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
 #grad {
   background: #C0C0C0; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #C0C0C0, #FFFFFF); /* For Safari 5.1 to 6.0 */
@@ -19,12 +10,28 @@ a {
 #opac {
   background: rgba(255,255,255,0.2);
   z-index: 9;
+  position: fixed;
 }
 
-header {
+#float {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
   position: fixed;
-      left: 0px;
-      top: 0px;
-      z-index: 1;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  color: grey;
+  background: rgba(255,255,255,0.8)
+}
+
+#projBody {
+  margin-top: 12.5%;
+}
+
+img {
+  border: solid 20px white;
+  border-left: solid 50px white;
+  border-right: solid 50px white;
+  box-shadow: 10px -10px 60px grey;
 }
