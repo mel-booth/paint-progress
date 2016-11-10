@@ -3,14 +3,14 @@
     <header id="float">
       <div class="row">
         <div class="four columns">
-          <h2>{{name}} - {{projectName}}</h2>
+          <h2>{{name}}</h2>
         </div>
         <div class="four columns">
           <h1>PAINT PROGRESS</h1>
         </div>
         <div class="four columns">
-          <form action="/entries/new" method="get">
-            <input type="submit" value="New Entry"/>
+          <form action="/projects/{{id}}/new" method="get">
+            <input type="submit" value="New Project"/>
           </form>
         </div>
         </div>
@@ -20,10 +20,9 @@
 
 <div class="container" id="projBody">
   <div class="twelve columns">
-    <h2>Latest:</h2>
-    {{#each entries}}
-    <h1>{{entryTitle}} {{date}}</h1>
-    <img src="{{image}}" style="width:800px;"></img>
+    {{#each projects}}
+    <a href="/projects/{{id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>
+
     {{/each}}
   </div>
 </div>
