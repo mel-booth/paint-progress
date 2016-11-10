@@ -36,7 +36,7 @@ img {
   border-right: solid 50px white;
   box-shadow: 10px -10px 60px grey;
 }
-.entryh3 {
+.entryh5 {
   margin-top: 2.5%;
 }
 
@@ -58,7 +58,11 @@ img {
   justify-content: center;
 }
 
-.submitButton {
+#submitButton {
+  color: white;
+  background-color: black;
+}
+#loginButton {
   color: white;
   background-color: black;
 }
