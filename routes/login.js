@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
   .then(function(user) {
     console.log(user);
     if (user.length > 0) {
-      res.redirect(`/entries/${user[0].id}`)
+      res.redirect(`/projects/${user[0].id}`)
     } else res.render('login', {'message':"Incorrect Login Information"})
   })
 

@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       return Promise.all([
         // Inserts seed entries
-        knex('projects').insert({id: 1, projectTitle: 'FootPrints'}),
+        knex('projects').insert({id: 1, projectTitle: 'FootPrints', 'dateCreated': '6/11/16', 'user_id': 1}),
       ]);
     });
 };
