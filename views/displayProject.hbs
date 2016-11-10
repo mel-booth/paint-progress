@@ -1,6 +1,7 @@
 <h1>Hello</h1>
-
-<input type="button" action="/entries/new" value="New Entry"></input>
+<form action="/entries/new" method="get">
+<input type="submit" value="New Entry"/>
+</form>
 {{#each entries}}
 
 <h1>{{entryTitle}} {{date}}</h1>
