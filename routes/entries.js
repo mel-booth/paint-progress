@@ -16,6 +16,12 @@ router.get('/', function(req, res, next) {
   // console.log(getEntries.getEntries());
 });
 
+router.get('/:userId', function(req, res) {
+    //getUser projects
+    console.log("redirecting")
+    res.redirect('/entries');
+})
+
 router.post('/', function(req, res, next) {
   getEntries.setEntry(req.body)
   .then(function(done){

@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('entryTitle')
     table.string('date')
     table.string('image')
+    table.integer('project_id')
   })
 };
 
