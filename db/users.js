@@ -17,5 +17,6 @@ function getUserByUsername(username) {
 }
 
 function getProjectsByUserId(id) {
+  console.log("trying to get user by id", id)
   return knex('projects').join('users', 'user_id', id)
 }
