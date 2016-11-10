@@ -51,15 +51,23 @@ img {
   border-radius: 5px;
 }
 
-#submitButton {
+#submit {
   margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#subButt {
-  text-align: center;
-  margin: 0 auto;
+#submitButton {
+  color: white;
+  background-color: black;
 }
 
 .date {
   margin-right: 1%;
+}
+
+#headerButton {
+  margin-top: 1%;
+  margin-bottom: 0;
 }

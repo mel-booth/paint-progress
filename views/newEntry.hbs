@@ -3,12 +3,12 @@
     <header id="float">
       <div class="row">
         <div class="four columns">
-          <h2>name  projectName</h2>
+          <h1>name  projectName</h1>
         </div>
         <div class="four columns">
           <h1>PAINT PROGRESS</h1>
         </div>
-        <div class="four columns">
+        <div class="four columns" id="headerButton">
           <form action="/entries" method="get">
             <input type="submit" value="Go Back"/>
           </form>
@@ -34,10 +34,10 @@
     <input placeholder="Image URL" type="text" name="image"/>
     <br>
   </div>
-<div class="container" id="submitButton">
-  <div class="row" id:"subButt">
+<div class="container" id="submit">
+  <div class="row">
     <div class="twelve columns" >
-      <input type="submit" value="Create Entry" />
+      <input type="submit" value="Create Entry" id="submitButton"/>
       </div>
   </div>
 </div>
