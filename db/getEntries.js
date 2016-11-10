@@ -14,10 +14,14 @@ function getEntries() {
 
 function setEntry(obj) {
   var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
-  return knex('entries').insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image})
+  return knex('entries')
+    .insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image})
 
 }
 
 function getEntriesByProjectId(id) {
-  return knex('entries').join('projects', 'project_id', id).join('users', 'user_id', 'users.id')
+  return knex('entries')
+    .join('projects', 'project_id', id)
+    .join('users', 'user_id', 'users.id')
+    .orderBy('entries.id', 'desc')
 }
