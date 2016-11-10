@@ -48,10 +48,16 @@ img {
   border-right: solid 50px white;
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
+  border-radius: 5px;
 }
 
 #submitButton {
   margin-top: 5%;
+}
+
+#subButt {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .date {
