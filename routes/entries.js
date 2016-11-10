@@ -22,7 +22,7 @@ router.get('/:projectId', function(req, res) {
     getEntries.getEntriesByProjectId(req.params.projectId)
       .then(function(entries) {
         console.log("result", entries);
-        res.render('displayProject', {entries, 'name': 'Harrison',
+        res.render('displayProject', {entries, 'name': entries[0].userName,
         'projectName': entries[0].projectTitle, 'user_id': entries[0].user_id, 'project_id': entries[0].project_id})
       })
 })
