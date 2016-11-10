@@ -19,5 +19,5 @@ function setEntry(obj) {
 }
 
 function getEntriesByProjectId(id) {
-  return knex('entries').join('projects', 'project_id', id)
+  return knex('entries').join('projects', 'project_id', id).join('users', 'user_id', 'users.id')
 }
