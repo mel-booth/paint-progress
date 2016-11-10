@@ -32,9 +32,9 @@ app.get('/', function(req, res) {
 })
 app.use('/users', users);
 
-app.use('/entries/new', newEntry)
+// app.use('/entries/new', newEntry)
 app.use('/login', login)
-app.use('/entries', entries)
+app.use('/projects/:userId/entries', entries)
 app.use('/projects', projects)
 
 // catch 404 and forward to error handler
