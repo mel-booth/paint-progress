@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+
+<input type="button" action="/entries/new" value="New Entry"></input>
+{{#each entries}}
+
+<h1>{{entryTitle}} {{date}}</h1>
+<img src="{{image}}" style="width:800px;"></img>
+
+{{/each}}
