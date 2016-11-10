@@ -12,7 +12,7 @@ function getEntries() {
 }
 
 function setEntry(obj) {
-  //var dateString = (obj.dateDay || 0) + '/' + (obj.dateMonth || 0) + '/' + (obj.dateYear || 0)
-  return knex('entries').insert({entryTitle: obj.entryTitle, date: obj.date, image: obj.image})
+  var dateString = (obj.dateDay || 0) + '/' + (obj.dateMonth || 0) + '/' + (obj.dateYear || 0)
+  return knex('entries').insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image})
 
 }
