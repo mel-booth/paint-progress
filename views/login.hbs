@@ -1,0 +1,12 @@
+<form action="/login" method="post">
+  <div class="container">
+    <h3>Username:</h3>
+    <input placeholder="username" type="text" name="user"/><br>
+    <h3>Password:</h3>
+    <input placeholder="password" type="password" name="password"/>
+    {{#if message}}
+      <h1>{{message}}</h1>
+    {{/if}}
+  </div>
+<input type="submit" value="Login"/>
+</form>

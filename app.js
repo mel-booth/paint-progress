@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var entries = require('./routes/entries')
 var newEntry = require('./routes/newEntry')
 var port = process.env.PORT || 3000
+var login = require('./routes/login')
+var projects = require('./routes/projects')
 
 var app = express();
 
@@ -25,10 +27,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.get('/', function(req, res) {
+  res.redirect('/login')
+})
 app.use('/users', users);
-app.use('/entries', entries)
+
 app.use('/entries/new', newEntry)
+app.use('/login', login)
+app.use('/entries', entries)
+app.use('/projects', projects)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
