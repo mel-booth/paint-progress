@@ -12,10 +12,10 @@ function getEntries() {
   return knex('entries')
 }
 
-function setEntry(obj) {
+function setEntry(obj, project_id) {
   var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
   return knex('entries')
-    .insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image})
+    .insert({entryTitle: obj.entryTitle, date: dateString, image: obj.image, project_id: Number(project_id)})
 
 }
 
