@@ -18,12 +18,12 @@ function getUserByUsername(username) {
 }
 
 function getProjectsByUserId(id) {
-  return knex('users').join('projects', 'projects.user_id', id)
+  return knex('users').join('projects', 'projects.user_id', Number(id))
 }
 
 function newProject(obj, userId) {
   var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
 
-  return knex('projects').insert({'projectTitle': obj.projectTitle, 'dateCreated': dateString, 'user_id': userId})
+  return knex('projects').insert({'projectTitle': obj.projectTitle, 'dateCreated': dateString, 'user_id': Number(userId)})
 
 }

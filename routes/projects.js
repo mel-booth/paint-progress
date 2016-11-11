@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:userId/new', function(req, res) {
   console.log("userId params", req.params.userId)
-  users.getProjectsByUserId(req.params.userId)
+  users.getProjectsByUserId(Number(req.params.userId))
     .then(function(projects) {
       console.log("projects",projects)
       if (projects.length === 0) res.redirect('/login')
