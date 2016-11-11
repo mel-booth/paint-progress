@@ -33,10 +33,10 @@ router.post('/:userId', function(req, res) {
 
 router.get('/:userId', function(req, res) {
   //console.log(req.params.userId);
-  users.getProjectsByUserId(Number(req.params.userId))
+  users.getProjectsByUserId(req.params.userId)
     .then(function(projects) {
       console.log("rendering projects", projects);
-      res.render('projects', {projects, 'name': projects[0].userName, 'userId': String(req.params.userId) })
+      res.render('projects', {projects, 'name': projects[0].userName, 'userId': req.params.userId })
     })
     .catch(function(err){
       console.log(err);
