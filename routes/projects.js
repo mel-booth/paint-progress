@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var users = require('../db/users')
+var getEntries = require('../db/getEntries')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -47,7 +48,19 @@ router.get('/:userId/entries/:projectId/new', function(req, res) {
   users.getProjectsByUserId(req.params.userId)
     .then(function(projects) {
       console.log("new project get output", projects)
-      res.render('newEntry', {'projectTitle': projects[0].projectTitle, 'username': projects[0].userName,'projectId': String(req.params.projectId), 'userId': String(req.params.userId)})
+      res.render('newEntry', {'projectTitle': projects[0].projectTitle, 'username': projects[0].userName,'projectId': String(req.params.projectId), 'user_id': String(req.params.userId)})
+    })
+    .catch(function(err){
+      console.log(err);
+    })
+
+})
+
+router.post('/:userId/entries/:projectId', function(req, res) {
+  console.log(req)
+  getEntries.setEntry(req.body, req.params.projectId)
+    .then(function(){
+      res.redirect(`/projects/${req.params.userId}/entries/${req.params.projectId}`)
     })
     .catch(function(err){
       console.log(err);
