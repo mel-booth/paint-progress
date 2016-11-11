@@ -44,7 +44,15 @@ router.get('/:userId', function(req, res) {
 })
 
 router.get('/:userId/entries/:projectId/new', function(req, res) {
-  res.render('newEntry', {'projectId': String(req.params.projectId), 'userId': String(req.params.userId)})
+  users.getProjectsByUserId(req.params.userId)
+    .then(function(projects) {
+      console.log("new project get output", projects)
+      res.render('newEntry', {'projectTitle': projects[0].projectTitle, 'username': projects[0].userName,'projectId': String(req.params.projectId), 'userId': String(req.params.userId)})
+    })
+    .catch(function(err){
+      console.log(err);
+    })
+
 })
 
 
