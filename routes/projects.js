@@ -13,7 +13,7 @@ router.get('/:userId/new', function(req, res) {
     .then(function(projects) {
       console.log("projects",projects)
       if (projects.length === 0) res.redirect('/login')
-      else res.render('newProject', {'username' : projects[0].userName, 'userId':projects[0].user_id})
+      else res.render('newProject', {'username' : projects[0].userName, 'userId': String(projects[0].user_id)})
     })
     .catch(function(err){
       console.log(err);
@@ -22,7 +22,7 @@ router.get('/:userId/new', function(req, res) {
 
 router.post('/:userId', function(req, res) {
   console.log("form request = ", req.body)
-  users.newProject(req.body, Number(req.params.userId))
+  users.newProject(req.body, req.params.userId)
     .then(function(result) {
       res.redirect(`/projects/${req.params.userId}`)
     })
@@ -36,7 +36,7 @@ router.get('/:userId', function(req, res) {
   users.getProjectsByUserId(Number(req.params.userId))
     .then(function(projects) {
       console.log("rendering projects", projects);
-      res.render('projects', {projects, 'name': projects[0].userName, 'userId': req.params.userId})
+      res.render('projects', {projects, 'name': projects[0].userName, 'userId': String(req.params.userId) })
     })
     .catch(function(err){
       console.log(err);
