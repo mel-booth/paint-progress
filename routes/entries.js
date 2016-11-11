@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 router.get('/:projectId', function(req, res) {
     //getUser projects
     console.log("project id = ", req.params.projectId);
-    getEntries.getEntriesByProjectId(req.params.projectId)
+    getEntries.getEntriesByProjectId(Number(req.params.projectId))
       .then(function(entries) {
         console.log("result", entries);
         res.render('displayProject', {entries, 'name': entries[0].userName,

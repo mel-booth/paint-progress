@@ -21,7 +21,7 @@
 <div class="container projects">
   <div class="twelve columns">
     {{#each projects}}
-    <a href="/projects/{{id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>
+    <a href="/projects/{{this.user_id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>
 
     {{/each}}
   </div>
