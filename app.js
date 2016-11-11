@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var entries = require('./routes/entries')
-var newEntry = require('./routes/newEntry')
 var port = process.env.PORT || 3000
 var login = require('./routes/login')
 var projects = require('./routes/projects')

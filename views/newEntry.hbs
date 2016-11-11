@@ -3,7 +3,7 @@
     <header id="float">
       <div class="row">
         <div class="four columns">
-          <h1>name  projectName</h1>
+          <h1>{{username}} - {{projectTitle}}</h1>
         </div>
         <div class="four columns">
           <h1>PAINT PROGRESS</h1>
@@ -19,7 +19,7 @@
 </div>
 <br></br>
 <br></br>
-<form action="/entries/{{projectId}}" method="post">
+<form action="/projects/{{user_id}}/entries/{{projectId}}" method="post">
   <div class="container" id= "newEntryCont">
     <h5 class="entryh5">Title:</h5>
     <input placeholder="Summary of changes" type="text" name="entryTitle"/><br>

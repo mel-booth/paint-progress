@@ -28,9 +28,7 @@ router.get('/:projectId', function(req, res) {
       })
 })
 
-router.get('/:projectId/new', function(req, res) {
-  res.render('newEntry', {'projectId': String(req.params.projectId)})
-})
+
 
 router.get('/', function(req, res, next) {
   res.render('newEntry')
