@@ -21,12 +21,11 @@
   left: 0px;
   top: 0px;
   z-index: 1;
-  color: grey;
   background: rgba(255,255,255,0.8)
 }
 
 #projBody {
-  margin-top: 12.5%;
+  margin-top: 10%;
 }
 
 img {
@@ -94,6 +93,7 @@ img {
 .header {
   text-decoration: none;
   color: black;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .projects {
@@ -105,4 +105,8 @@ img {
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
   border-radius: 5px;d
+}
+header {
+  font-family: 'Permanent Marker', cursive;
+  color: black
 }
