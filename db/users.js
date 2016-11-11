@@ -18,6 +18,8 @@ function getUserByUsername(username) {
 }
 
 function getProjectsByUserId(id) {
+  console.log("type of id is", typeof id)
+  console.log("id is ", id)
   return knex('users').join('projects', 'projects.user_id', Number(id))
 }
 
