@@ -1,3 +1,4 @@
+/*BACKGROUND*/
 #grad {
   background: #C0C0C0; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #C0C0C0, #FFFFFF); /* For Safari 5.1 to 6.0 */
@@ -6,7 +7,9 @@
   background: linear-gradient(to bottom right, #C0C0C0, #FFFFFF); /* Standard syntax */
   background-attachment: fixed;
 }
+/*-----------------------------------------------------*/
 
+/*PROJECT VIEW PAGE*/
 #opac {
   background: rgba(255,255,255,0.2);
   z-index: 9;
@@ -36,6 +39,9 @@ img {
   border-right: solid 50px white;
   box-shadow: 10px -10px 60px grey;
 }
+/*-----------------------------------------------------*/
+
+/*NEW ENTRY PAGE*/
 .entryh5 {
   margin-top: 2.5%;
 }
@@ -52,6 +58,10 @@ img {
   font-family: 'Goudy Bookletter 1911', serif;
 }
 
+.date {
+  margin-right: 1%;
+}
+
 .submit {
   margin-top: 5%;
   display: flex;
@@ -64,21 +74,19 @@ img {
   background-color: black;
   font-family: 'Goudy Bookletter 1911', serif;
 }
-#loginButton {
-  color: white;
-  background-color: black;
-  font-family: 'Goudy Bookletter 1911', serif;
-}
-
-.date {
-  margin-right: 1%;
-}
 
 .headerButton {
   margin-top: 1.5%;
   margin-bottom: 0;
 }
+/*-----------------------------------------------------*/
 
+/*LOGIN PAGE*/
+#loginButton {
+  color: white;
+  background-color: black;
+  font-family: 'Goudy Bookletter 1911', serif;
+}
 
 #loginForm {
   margin-top: 10%;
@@ -100,7 +108,9 @@ img {
   color: black;
   font-family: 'Permanent Marker', cursive;
 }
+/*-----------------------------------------------------*/
 
+/*PROJECT LIST PAGE*/
 .projects {
   margin-top: 7.5%;
   background-color: white;
@@ -119,7 +129,9 @@ header {
   font-family: 'Permanent Marker', cursive;
   color: black
 }
+/*-----------------------------------------------------*/
 
+/*NEW PROJECT PAGE */
 .button {
   height: 3.5em;
   background-color: lightgrey;
