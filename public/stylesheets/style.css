@@ -26,6 +26,7 @@
 
 #projBody {
   margin-top: 10%;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
 img {
@@ -48,6 +49,7 @@ img {
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
   border-radius: 5px;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .submit {
@@ -60,10 +62,12 @@ img {
 #submitButton {
   color: white;
   background-color: black;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 #loginButton {
   color: white;
   background-color: black;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .date {
@@ -88,6 +92,7 @@ img {
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
   border-radius: 5px;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .header {
@@ -104,7 +109,8 @@ img {
   border-right: solid 50px white;
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
-  border-radius: 5px;d
+  border-radius: 5px;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 header {
   font-family: 'Permanent Marker', cursive;
