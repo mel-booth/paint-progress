@@ -19,18 +19,23 @@ router.get('/', function(req, res, next) {
 router.get('/:projectId', function(req, res) {
     //getUser projects
     console.log("project id = ", req.params.projectId);
-    getEntries.getEntriesByProjectId(Number(req.params.projectId))
+    getEntries.getEntriesByProjectId(req.params.projectId)
       .then(function(entries) {
         if (entries.length === 0) res.render('displayProject')
         console.log("result", entries);
         res.render('displayProject', {entries, 'name': entries[0].userName,
-        'projectName': entries[0].projectTitle, 'user_id': entries[0].user_id, 'project_id': entries[0].project_id})
+        'projectName': entries[0].projectTitle, 'user_id': String(entries[0].user_id), 'project_id': String(entries[0].project_id)})
       })
 })
 
 router.get('/:projectId/new', function(req, res) {
-  res.render('newEntry')
+  res.render('newEntry', {'projectId': String(req.params.projectId)})
 })
+
+router.get('/', function(req, res, next) {
+  res.render('newEntry')
+  // console.log(getEntries.getEntries());
+});
 
 router.post('/', function(req, res, next) {
   getEntries.setEntry(req.body)
