@@ -111,8 +111,20 @@ img {
   padding-bottom: 2%;
   border-radius: 5px;
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: row;
 }
 header {
   font-family: 'Permanent Marker', cursive;
   color: black
+}
+
+.button {
+  height: 3.5em;
+  background-color: lightgrey;
+}
+.button:hover {
+  height: 3.5em;
+  background-color: white;
 }
