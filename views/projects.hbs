@@ -3,12 +3,12 @@
     <header id="float">
       <div class="row">
         <div class="four columns">
-          <h2>{{name}}</h2>
+          <h1>{{name}}</h1>
         </div>
         <div class="four columns">
-          <a class="header" href="/login">PAINT PROGRESS</ha>
+          <h1><a class="header" href="/login">PAINT PROGRESS</a></h1>
         </div>
-        <div class="four columns">
+        <div class="four columns headerButton">
           <form action="/projects/{{id}}/new" method="get">
             <input type="submit" value="New Project"/>
           </form>
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div class="container" id="projBody">
+<div class="container projects">
   <div class="twelve columns">
     {{#each projects}}
     <a href="/projects/{{id}}/entries/{{this.id}}"<h1>{{projectTitle}} {{dateCreated}}</h1></a>

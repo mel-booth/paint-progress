@@ -71,10 +71,11 @@ img {
   margin-right: 1%;
 }
 
-#headerButton {
-  margin-top: 1%;
+.headerButton {
+  margin-top: 1.5%;
   margin-bottom: 0;
 }
+
 
 #loginForm {
   margin-top: 10%;
@@ -88,4 +89,20 @@ img {
   box-shadow: 10px -10px 60px grey;
   padding-bottom: 2%;
   border-radius: 5px;
+}
+
+.header {
+  text-decoration: none;
+  color: black;
+}
+
+.projects {
+  margin-top: 2%;
+  background-color: white;
+  border: solid 20px white;
+  border-left: solid 50px white;
+  border-right: solid 50px white;
+  box-shadow: 10px -10px 60px grey;
+  padding-bottom: 2%;
+  border-radius: 5px;d
 }
