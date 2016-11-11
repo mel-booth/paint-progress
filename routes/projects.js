@@ -22,7 +22,7 @@ router.get('/:userId/new', function(req, res) {
 
 router.post('/:userId', function(req, res) {
   console.log("form request = ", req.body)
-  users.newProject(req.body, req.params.userId)
+  users.newProject(req.body, Number(req.params.userId))
     .then(function(result) {
       res.redirect(`/projects/${req.params.userId}`)
     })
@@ -33,7 +33,7 @@ router.post('/:userId', function(req, res) {
 
 router.get('/:userId', function(req, res) {
   //console.log(req.params.userId);
-  users.getProjectsByUserId(req.params.userId)
+  users.getProjectsByUserId(Number(req.params.userId))
     .then(function(projects) {
       console.log("rendering projects", projects);
       res.render('projects', {projects, 'name': projects[0].userName, 'userId': req.params.userId})

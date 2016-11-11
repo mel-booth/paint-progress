@@ -25,4 +25,5 @@ function newProject(obj, userId) {
   var dateString = `${obj.dateDay}/${obj.dateMonth}/${obj.dateYear}`
 
   return knex('projects').insert({'projectTitle': obj.projectTitle, 'dateCreated': dateString, 'user_id': userId})
+
 }
