@@ -43,6 +43,9 @@ router.get('/:userId', function(req, res) {
     })
 })
 
+router.get('/:userId/entries/:projectId/new', function(req, res) {
+  res.render('newEntry', {'projectId': String(req.params.projectId), 'userId': String(req.params.userId)})
+})
 
 
 module.exports = router;
